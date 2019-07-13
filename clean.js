@@ -1,3 +1,8 @@
+function openSearch() {
+    console.log('This is where my search logic would go...');
+    console.log('IF I HAD ANY');
+}
+
 ready('.chat-menu', function(element) {
     console.log(element);
     // Get button list
@@ -12,6 +17,7 @@ ready('.chat-menu', function(element) {
     icon.className = 'gmn-icon-' + 'search';
     let span = searchButton.getElementsByTagName('span')[0];
     span.textContent = 'Search';
+    searchButton.onclick = openSearch;
     // Insert new search button into list
     firstButton.parentNode.insertBefore(searchButton, firstButton.nextSibling);
 });
