@@ -1,0 +1,33 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #525D68;
+}
+h1, h2 {
+    color: #0C88C2;
+}
+label {
+    display: block;
+    padding: 3px 0;
+}
+a {
+    color: inherit;
+}
+input, textarea {
+    outline: none;
+}
+textarea {
+    color: inherit;
+}
+
+.new {
+    display: inline-block;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.new::after {
+    content: 'NEW';
+}
