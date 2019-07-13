@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "BetterGroupMe",
+    "description": "Clean up and enhance GroupMe's interface",
+    "version": "0.1.0",
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+    "content_scripts": [{
+        "matches": ["https://web.groupme.com/*"],
+        "css": ["css/clean.css"],
+        "js": ["clean.js"],
+        "run_at": "document_start"
+    }],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "webRequest", "webRequestBlocking", "https://asset-cdn.schoology.com/*"
+    ],
+    "web_accessible_resources": ["options/options.html"]
+}
