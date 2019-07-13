@@ -10,7 +10,7 @@
     "content_scripts": [{
         "matches": ["https://web.groupme.com/*"],
         "css": ["css/clean.css"],
-        "js": ["clean.js"],
+        "js": ["mutator.js", "clean.js"],
         "run_at": "document_start"
     }],
     "background": {
