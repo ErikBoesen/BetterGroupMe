@@ -1,10 +1,11 @@
 function openSearch() {
-    console.log('This is where my search logic would go...');
-    console.log('IF I HAD ANY');
+    // Container for the entire conversation
+    let chat = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+
+
 }
 
 ready('.chat-menu', function(element) {
-    console.log(element);
     // Get button list
     let list = element.getElementsByClassName('list')[0];
     // Grab, then copy, the first button in list
@@ -20,6 +21,17 @@ ready('.chat-menu', function(element) {
     searchButton.onclick = openSearch;
     // Insert new search button into list
     firstButton.parentNode.insertBefore(searchButton, firstButton.nextSibling);
+});
+
+ready('.composer-wrapper', function(element) {
+    let searchBox = document.createElement('div');
+    searchBox.id = 'search-composer';
+    // TODO: build this with DOM manipulation
+    searchBox.innerHTML = '<div class="composer-wrapper"><div role="textbox" class="emoji-wysiwyg-editor" contenteditable="true" placeholder="Search..."></div></div>';
+    searchBox.innerHTML += '<div class="controls controls-left"><button type="button" class="emoji-button composer-btn accessible-focus"><i class="gmn-icon-search"></i></button></div>';
+    let composer = chat.getElementsByClassName('composer-wrapper')[0];
+    console.log(composer);
+    composer.parentNode.insertBefore(searchBox, composer);
 });
 
 const browser = window.browser || window.chrome;
