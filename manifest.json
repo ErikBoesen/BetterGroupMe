@@ -9,11 +9,11 @@
     },
     "content_scripts": [{
         "matches": ["https://web.groupme.com/*"],
-        "js": ["mutator.js", "clean.js"],
+        "js": ["mutator.js", "clean.js", "search.js"],
         "run_at": "document_start"
     }, {
         "matches": ["https://web.groupme.com/*"],
-        "css": ["css/clean.css"]
+        "css": ["css/clean.css", "css/search.css"]
     }],
     "background": {
         "scripts": ["background.js"]
