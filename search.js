@@ -1,3 +1,17 @@
+function log(content) {
+    console.log('BETTERGROUPME:', content);
+}
+
+function getCookie(name) {
+    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return v ? v[2] : null;
+}
+const GROUPME_TOKEN = getCookie('token');
+
+function index(id) {
+    log('indexing ' + id);
+}
+
 function openSearch() {
     // Container for the entire conversation
     let chat = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
