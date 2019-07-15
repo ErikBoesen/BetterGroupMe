@@ -1,8 +1,10 @@
 function openSearch() {
     // Container for the entire conversation
     let chat = this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+    // Get internal ID of the chat
+    let id = chat.getElementsByClassName('gm-group-topic')[0].id.replace('group-topic-', '');
 
-
+    let query = window.prompt('Enter your search query: ');
 }
 
 ready('.chat-menu', function(element) {
@@ -23,6 +25,8 @@ ready('.chat-menu', function(element) {
     firstButton.parentNode.insertBefore(searchButton, firstButton.nextSibling);
 });
 
+/*
+// FIXME: this breaks everything because .composer-wrapper updates all the time
 ready('.composer-wrapper', function(element) {
     let chat = element.parentElement.parentElement.parentElement;
     let searchBox = document.createElement('div');
@@ -31,6 +35,6 @@ ready('.composer-wrapper', function(element) {
     searchBox.innerHTML = '<div class="composer-wrapper"><div role="textbox" class="emoji-wysiwyg-editor" contenteditable="true" placeholder="Search..."></div></div>';
     searchBox.innerHTML += '<div class="controls controls-left"><button type="button" class=""><i class="gmn-icon-search"></i></button></div>';
     let composer = chat.getElementsByClassName('composer-wrapper')[0];
-    console.log(composer);
     composer.parentNode.insertBefore(searchBox, composer);
 });
+*/
