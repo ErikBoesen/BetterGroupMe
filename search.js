@@ -32,10 +32,6 @@ log('token ' + GROUPME_TOKEN);
       console.log("openDb.onupgradeneeded");
       var store = evt.currentTarget.result.createObjectStore(
         DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
-
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
     };
   }
 
