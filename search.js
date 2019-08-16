@@ -55,9 +55,13 @@ log('token ' + GROUPME_TOKEN);
 
   openDb();
 
+    function fetchMessages(initialMessage) {
+
+    }
 
 
 })();
+
 
 function index(id) {
     log('indexing ' + id);
